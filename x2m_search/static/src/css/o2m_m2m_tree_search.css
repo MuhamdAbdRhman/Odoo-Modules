@@ -1,0 +1,120 @@
+/* Unified search bar for both one2many and many2many list views – same look everywhere */
+.o_field_x2many .o_list_renderer .x2m_search_bar_container {
+    position: relative;
+    z-index: 9999;
+    padding: 0.5rem 0;
+    margin-bottom: 0.75rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Inner search view (input + facets) – consistent in o2m and m2m */
+.o_field_x2many .o_list_renderer .x2m_search_bar_container .o_searchview {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.o_field_x2many .o_list_renderer .x2m_search_bar_container .o_searchview_input_container {
+    margin-bottom: 0;
+}
+
+.o_field_x2many .o_list_renderer .x2m_search_bar_container .o_searchview_facets {
+    margin: 0;
+}
+
+/* Legacy slot styling (if used elsewhere) */
+.x2m_search_bar_slot {
+    position: relative;
+    z-index: 1050;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background: var(--o-view-background-color, #fff);
+    border-radius: 0.25rem;
+    border: 1px solid var(--border-color, #dee2e6);
+    box-sizing: border-box;
+}
+
+.x2m_search_bar_slot .x2m_search_bar_container {
+    background: transparent;
+}
+
+/* Embedded search view styling - matches Odoo's native control panel search */
+.o_control_panel_actions .o_cp_searchview {
+    margin-bottom: 0;
+}
+
+/* Ensure table rows can be hidden by search */
+.o_list_view table tbody tr[style*="display: none"] {
+    display: none !important;
+}
+
+/* Make sure search view fits well in embedded context */
+.o_list_view .o_control_panel_actions {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Ensure facets display correctly */
+.o_searchview_facet {
+    margin: 2px;
+}
+
+/* Group header styling - matches Odoo exactly */
+.o_list_table tbody tr.o_group_header {
+    background-color: #f8f9fa;
+}
+
+.o_list_table tbody tr.o_group_header > th,
+.o_list_table tbody tr.o_group_header > td {
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.o_list_table tbody tr.o_group_header .o_group_name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.o_list_table tbody tr.o_group_header .o_group_caret {
+    margin-inline-start: calc(var(--o-list-group-level, 0) * 1rem);
+    cursor: pointer;
+}
+
+.o_list_table tbody tr.o_group_header.o_group_open .o_group_name {
+    color: #212529;
+    font-weight: 600;
+}
+
+.o_list_table tbody tr.o_group_header:not(.o_group_open) .o_group_name {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.o_list_table tbody tr.o_group_header:hover {
+    background-color: #e9ecef;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .o_list_view .o_control_panel_actions {
+        flex-direction: column;
+    }
+    
+    .o_list_view .o_cp_searchview {
+        width: 100%;
+    }
+}

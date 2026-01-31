@@ -1,0 +1,78 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">X2M Search</h2>
+        <h3 class="oe_slogan">Search, filter, and group by in O2M and M2M tree views</h3>
+        <p class="oe_mt32 text-center">
+            Add Odoo's native search view to One2Many (O2M) and Many2Many (M2M) tree views
+            embedded in form views. No XML changes required&mdash;works with your existing
+            models and search views.
+        </p>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan">Features</h3>
+        <div class="oe_span12">
+            <ul class="mb-4">
+                <li><strong>Native search view</strong> &mdash; Uses Odoo's standard search bar above embedded tree views.</li>
+                <li><strong>Automatic detection</strong> &mdash; When the related model has a search view in <code>ir.ui.view</code>, it is shown automatically.</li>
+                <li><strong>Filters and Group By</strong> &mdash; Filters and group by options from the search view arch are available and applied to the tree.</li>
+                <li><strong>Field-specific search</strong> &mdash; Search runs on the fields defined in the model's search view.</li>
+                <li><strong>No configuration needed</strong> &mdash; No XML modifications; works with all O2M and M2M tree views.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan">How it works</h3>
+        <p class="oe_mt32">
+            When you open a form that contains an O2M or M2M field with a tree view, the module
+            checks whether the related model has a search view. If it does, the search bar is
+            rendered above the tree. You can type in the search box, apply filters, and use
+            group by exactly like in standard list views. Rows are filtered and grouped in
+            real time without leaving the form.
+        </p>
+        <p class="oe_mt16">
+            If the model has no search view, a minimal default search (on a text field) is
+            still provided so you can filter the embedded list.
+        </p>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan">Screenshots</h3>
+        <div class="oe_span12 oe_mt32">
+            <h4 class="oe_mb16">Filter order lines (e.g. Quantity &gt;= 5)</h4>
+            <p class="oe_mb16">Apply filters from the search view directly on the embedded tree. Only lines matching the filter are shown.</p>
+            <img class="oe_picture oe_screenshot" src="images/order_lines_filter.png" alt="Order lines filtered by Quantity >= 5"/>
+        </div>
+        <div class="oe_span12 oe_mt32">
+            <h4 class="oe_mb16">Group by (e.g. Unit of Measure)</h4>
+            <p class="oe_mb16">Use group-by options from the search view to group rows (e.g. by Units, Dozens) without leaving the form.</p>
+            <img class="oe_picture oe_screenshot" src="images/order_lines_group_by.png" alt="Order lines grouped by Unit of Measure"/>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan">Requirements</h3>
+        <p class="oe_mt32 text-center">
+            Odoo 17.0 (or compatible version). Depends only on <code>base</code> and <code>web</code>.
+        </p>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12 text-center">
+            <p class="oe_mt32">
+                For support, contact <a href="mailto:muhamed.inbox@gmail.com">muhamed.inbox@gmail.com</a>.
+            </p>
+        </div>
+    </div>
+</section>
